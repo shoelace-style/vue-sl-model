@@ -30,7 +30,7 @@ Now you can use the `v-sl-model` directive to keep your data in sync!
 
 ## Why is this necessary?
 
-Currently, there's [no support for `v-model` on custom elements](no support for v-model on custom elements) in Vue. You can handle two-way binding manually, but's it rather verbose.
+Currently, there's [no support for v-model on custom elements](https://github.com/vuejs/vue/issues/7830) in Vue. You can handle two-way binding manually, but's it rather verbose.
 
 ```html
 <!-- This doesn't work -->
