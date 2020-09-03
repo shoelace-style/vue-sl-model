@@ -35,9 +35,9 @@ Currently, there's [no support for v-model on custom elements](https://github.co
 ```html
 <!-- This doesn't work -->
 <sl-input v-model="name">
-  <!-- This works, but it's a bit longer -->
-  <sl-input :value="name" @input="name = $event.target.value"></sl-input
-></sl-input>
+
+<!-- This works, but it's a bit longer -->
+<sl-input :value="name" @input="name = $event.target.value"></sl-input></sl-input>
 ```
 
 This utility solves this problem by creating a custom directive that works just like `v-model` but for Shoelace components.
