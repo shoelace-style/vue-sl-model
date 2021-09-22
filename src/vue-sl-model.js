@@ -9,7 +9,7 @@ export default {
         };
 
         wm.set(el, inputHandler);
-        el.value = binding.value;
+        el.value = binding.value ?? "";
         el.addEventListener("input", inputHandler);
       },
       updated(el, binding) {
