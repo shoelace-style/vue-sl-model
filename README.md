@@ -13,13 +13,15 @@ npm install @shoelace-style/vue-sl-model
 Next, import the directive into your app and enable it like this.
 
 ```js
-import ShoelaceModelDirective from 'shoelace-model-directive.js';
+import ShoelaceModelDirective from '@shoelace-style/vue-sl-model';
 
-Vue.use(ShoelaceModelDirective);
-Vue.config.ignoredElements = [/^sl-/];
+import { createApp } from 'vue'
+import App from "./App.vue"
 
-// Your init here
-new Vue({ ... });
+const app = createApp(App)
+app.use(ShoelaceModelDirective)
+app.config.compilerOptions.isCustomElement = tag => tag.startsWith('sl-')
+app.mount("#app")
 ```
 
 Now you can use the `v-sl-model` directive to keep your data in sync!

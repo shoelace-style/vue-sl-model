@@ -1,21 +1,24 @@
-const wm = new WeakMap();
-
 export default {
-  install: function (Vue) {
-    Vue.directive('sl-model', {
-      bind (el, binding, vnode) {
-        const inputHandler = event => Vue.set(vnode.context, binding.expression, event.target.value);
+  name: 'vue-sl-model',
+  install: (app, _options) => {
+    const wm = new WeakMap();
+    app.directive("sl-model", {
+      beforeMount(el, binding, _vnode) {
+        const inputHandler = function inputHandler(event) {
+          return (binding.instance[binding.value] = event.target.value);
+        };
+
         wm.set(el, inputHandler);
         el.value = binding.value;
-        el.addEventListener('input', inputHandler);
+        el.addEventListener("input", inputHandler);
       },
-      componentUpdated(el, binding) {
-        el.value = binding.value;
-      },      
-      unbind(el) {
+      updated(el, binding) {
+        el.value = binding.value ?? "";
+      },
+      unmounted(el, _binding) {
         const inputHandler = wm.get(el);
         el.removeEventListener(el, inputHandler);
-      }
-    })
-  }    
+      },
+    });
+  },
 };
