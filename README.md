@@ -1,6 +1,19 @@
 # Vue Directive for Two-way Binding Shoelace Components
 
-A custom Vue directive that makes two-way binding [Shoelace components](https://shoelace.style) easier.
+A custom Vue 3 directive that makes two-way binding [Shoelace components](https://shoelace.style) easier.
+
+<details>
+<summary>Instructions for Vue 2 users</summary>
+
+If you're looking for a directive that's compatible with Vue 2, install version 1 of this package:
+
+```bash
+npm install @shoelace-style/vue-sl-model@1
+```
+
+Then [follow these instructions](https://github.com/shoelace-style/vue-sl-model/tree/77cac5afd36bd6e3321b0a738e3c1751ff006158#vue-directive-for-two-way-binding-shoelace-components) instead.
+
+</details>
 
 ## Usage
 
