@@ -37,6 +37,7 @@ const app = createApp(App)
 app.use(ShoelaceModelDirective)
 
 app.config.compilerOptions.isCustomElement = tag => tag.startsWith('sl-')
+
 // If using Vite, the above "isCustomElement" needs to be deleted and defined in vite.config.js
 // See below for an example vite.config.js
 
