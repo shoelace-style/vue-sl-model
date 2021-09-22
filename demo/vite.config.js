@@ -1,4 +1,3 @@
-import ShoelaceModelDirective from '@shoelace-style/vue-sl-model';
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
