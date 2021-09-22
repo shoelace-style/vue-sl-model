@@ -1,2 +1,9 @@
 dist
 node_modules
+
+.DS_Store
+demo/*.local
+demo/dist
+demo/dist-ssr
+demo/node_modules
+demo/public/assets/icons

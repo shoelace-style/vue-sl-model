@@ -1,0 +1,20 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run shoelace:copy && vite",
+    "build": "npm run shoelace:copy && vite build",
+    "serve": "vite preview",
+    "shoelace:copy": "rm -rf public/assets/icons && mkdir -p public/assets/icons && cp -R node_modules/@shoelace-style/shoelace/dist/assets/icons public/assets"
+  },
+  "dependencies": {
+    "@shoelace-style/shoelace": "*",
+    "@shoelace-style/vue-sl-model": "file:../",
+    "vue": "^3.2.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.0",
+    "vite": "^2.5.10"
+  }
+}
