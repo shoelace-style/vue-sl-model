@@ -4,7 +4,7 @@ export default {
     const wm = new WeakMap();
     app.directive("sl-model", {
       beforeMount(el, binding, _vnode) {
-        const eventName = el.tagName.includes("SELECT") ? "sl-change" : "input";
+        const eventName = el.tagName === "SL-SELECT" ? "sl-change" : "input";
         const inputHandler = function inputHandler(event) {
           return (binding.instance[binding.value] = event.target.value);
         };
